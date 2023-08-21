@@ -1,7 +1,7 @@
 var name = "john"
 name = "mary"
 
-println(name)
+println(name) // mary
 
 /*
 var name = "john"
