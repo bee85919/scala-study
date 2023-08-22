@@ -5,15 +5,21 @@ object OOP {
 
     val Sedan: Car = new Sedan()
     val SUV: Car = new SUV()
-    val Bus: Car = new Bus()
+    val Bus: AbstractCar = new Bus()
 
-    val cars = List(Sedan, SUV, Bus)
+    val cars = List(Sedan, SUV)
 
     cars.foreach(it => {
       it.engineStart()
       it.engineStop()
     })
 
+    Bus.changeName("Ferrari")
+
+
+    Bus.engineStop()
     Bus.asInstanceOf[Payment].collect(amount = 1600)
+    Bus.engineStart()
+    Bus.accelerate()
   }
 }
