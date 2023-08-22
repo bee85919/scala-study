@@ -6,7 +6,7 @@ class Person(val name: String, val age: Int) {
   def walk(destX: Int, destY: Int): Unit = {
     x = destX
     y = destY
-    println(s"$name walks to ($x, $y) with speed $speed.")
+    println(s"${name} ${speed}의 속도로 ($x, $y)으로 걷는다.")
   }
 
   override def toString: String = s"$name, age: $age, speed: $speed, location: ($x, $y)"
@@ -18,7 +18,7 @@ class Parent(name: String, age: Int) extends Person(name, age) {
   def run(destX: Int, destY: Int): Unit = {
     x = destX
     y = destY
-    println(s"$name runs to ($x, $y) with speed ${speed + 2}.")
+    println(s"${name} ${speed + 2}의 속도로 ($x, $y)으로 달린다.")
   }
 }
 
@@ -28,15 +28,15 @@ class Child(name: String, age: Int) extends Parent(name, age) {
   def swim(destX: Int, destY: Int): Unit = {
     x = destX
     y = destY
-    println(s"$name swims to ($x, $y) with speed ${speed + 1}.")
+    println(s"${name} ${speed + 1}의 속도로 ($x, $y)으로 수영한다.")
   }
 }
 
 object Main {
   def main(args: Array[String]): Unit = {
-    val grandparent = new Person("Grandparent", 70)
-    val parent = new Parent("Parent", 40)
-    val child = new Child("Child", 10)
+    val grandparent = new Person("조부모가", 70)
+    val parent = new Parent("부모가", 40)
+    val child = new Child("자식이", 10)
 
     println(grandparent)
     println(parent)
