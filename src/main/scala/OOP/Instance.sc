@@ -7,4 +7,4 @@ println(myBook1.title)
 
 myBook1.title = "My awesomebook 1 updated!"
 
-println(mybook1.title)
+println(myBook1.title)
